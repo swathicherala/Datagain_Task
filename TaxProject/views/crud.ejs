@@ -1,0 +1,89 @@
+<html>
+    <head><title>Tax Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    
+    <style>
+        table thead{
+          background-color: green;
+        }
+     </style>   
+</head>
+<body>
+    <table class="table table-light table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Tax Year
+                </th>
+                <th>
+                    Hearing Date
+                </th>
+                <th>
+                    Jurisdiction
+                </th>
+                <th>
+                    Client Name
+                </th>
+                <th>
+                    Parcel Id
+                </th>
+                <th>
+                    Appeal Status
+                </th>
+                <th>
+                    Appeal Letter
+                </th>
+                <th>
+                    Target Value
+                </th>
+                <th>
+                    Hearing Value
+                </th>
+                <th colspan="3">
+                    Finalized Value
+                </th>
+            </tr>
+            <tbody>
+                <% emp.forEach(function(empdetails){
+                    %>
+                    <tr>
+                        <td><%=empdetails.id%></td>
+                        <td><%=empdetails.taxyear%></td>
+                        <td><%=empdetails.hearingdate%></td>
+                        <td><%=empdetails.jurisdiction%></td>
+                        <td><%=empdetails.clientname%></td>
+                        <td><%=empdetails.parcelid%></td>
+                        <td><%=empdetails.appealstatus%></td>
+                        <td><%=empdetails.appealletter%></td>
+                        <td><%=empdetails.target%></td>
+                        <td><%=empdetails.hearing%></td>
+                        <td><input type="text" name="final" id="finalid"></td>
+                        <th>
+                         
+                            <a href="updateemp"><input type="submit" value="Update" class="btn btn-warning"></a>
+                           
+                        </th>
+                        <th>
+                            <!-- <a href="delete"><input type="submit" value="Delete" action="delete" class="btn btn-danger"></a> -->
+                            <form action="delete" method="post">
+                                <input type="hidden" name="id" value="<%=empdetails.id%>">
+                                <input type="submit" value="Delete"  class="btn btn-danger">
+                            </form>
+                         </th>
+                    </tr>
+               <%});
+               %>
+            </tbody>
+        </thead>
+    </table>
+</body>
+</html>

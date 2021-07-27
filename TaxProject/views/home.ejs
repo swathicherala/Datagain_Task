@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Tax Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  
+    <style>
+        .container{
+            background-color:aqua;
+            margin-top:10px;
+            border-radius: 5px
+        }
+        .container label{
+            font-size: 20px;
+            
+        }
+        .form-group{
+            margin-bottom: 25px;
+        }
+    </style>
+    </head>
+<body>
+<div class="container">
+    <form action="tax" method="post">
+        <div class="form-group">
+             <label>Tax Year:</label>
+             <input type="text" name="year" id="year" class="form-control">
+        </div>
+        <div class="form-group">
+         <label>Hearing date:</label>
+         <input type="date" name="date" id="date" class="form-control">
+    </div>
+    <div class="form-group">
+     <label>Jurisdiction:</label>
+     <input type="text" name="jurisdiction" id="jurisdiction" class="form-control">
+ </div>
+ <div class="form-group">
+     <label>Client Name:</label>
+     <input type="text" name="client" id="client" class="form-control">
+ </div>
+ <div class="form-group">
+     <label>Parcel Id:</label>
+     <input type="number" name="parcel" id="parcel" class="form-control">
+ </div>
+ <div class="form-group">
+     <label>Appeal Status:</label>
+     <input type="text" name="status" id="status" class="form-control">
+ </div>
+ <div class="form-group">
+     <label>Appeal Letter:</label>
+     <input type="text" name="letter" id="letter" class="form-control">
+ </div>
+ <div class="form-group">
+     <label>Target Value:</label>
+     <input type="number" name="target" id="target" class="form-control">
+ </div>
+ <div class="form-group">
+     <label>Hearing Value:</label>
+     <input type="number" name="hearing" id="hearing" class="form-control">
+ </div>
+ <input type="submit" value="Submit" class="btn btn-primary">
+ <a href="retrieve"><input type="button" value="Show Data" class="btn btn-success"></a>
+     </form>
+</div>
+</body>
+</html>
